@@ -19,10 +19,7 @@ impl<T: Copy> Stack<T> {
         self.vec.pop()
     }
 
-    pub fn peek(&self) -> Option<T> {
-        match self.vec.last() {
-            Some(x) => Some(x.clone()),
-            None => None,
-        }
+    pub fn peek(&self) -> Option<&T> {
+        self.vec.last()
     }
 }
